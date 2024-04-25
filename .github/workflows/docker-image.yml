@@ -19,7 +19,7 @@ jobs:
         password: ${{ secrets.DOCKER_TOKEN }}
  
     - name: Build Docker Image
-      run: docker build -t wuxyyin/wsc-screentocode-service -f ./backend/Dockerfile .
+      run: docker build -t wuxyyin/wsc-screentocode-service -f ./backend/Dockerfile ./backend
  
     - name: Push Docker Image
       run: docker push wuxyyin/wsc-screentocode-service
